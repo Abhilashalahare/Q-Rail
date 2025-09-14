@@ -1,0 +1,107 @@
+Authentication (Login / Signup)
+
+The website must open with a Login / Signup page.
+
+User chooses role at signup:
+
+Vendor (manufacturer of parts)
+
+Railway Official (inspector/maintenance/admin staff)
+
+After login, redirect the user to the correct dashboard depending on role.
+
+Store credentials in dummy JSON/mock database (no real backend required).
+
+👨‍🏭 Vendor Workflow (After Login as Vendor)
+
+Vendor Dashboard
+
+Form to enter manufacturing details for each part:
+
+Part type (elastic rail clip / liner / pad / sleeper).
+
+Manufacturing location.
+
+Material composition.
+
+Lot number (auto-generated or manual).
+
+Date of manufacture.
+
+Expiry date.
+
+Submit form → system generates a Unique QR Code.
+
+QR Code is shown on screen + downloadable image (this simulates what would be engraved on the part).
+
+Vendor Records Page (Optional)
+
+Table of all parts the vendor has created with generated QR codes.
+
+Ability to view/download past QR codes.
+
+🚉 Railway Official Workflow (After Login as Official)
+
+Use the same structure you already defined (slightly improved for clarity):
+
+Home / Landing Page
+
+Intro to the system.
+
+Quick buttons: Scan QR, Dashboard, Complaints, Reports.
+
+QR Scanning Simulation Page
+
+Input field for manual QR code entry (string/ID).
+
+Upload dummy QR image option.
+
+On scan → fetch dummy data (linked to vendor form or mock DB).
+
+Display part details: vendor name, lot number, supply date, warranty, last inspection date, status (OK / Warning / Defective).
+
+Complaint Registration Page
+
+Form: fitting ID, issue description, optional file upload.
+
+Save complaints in a dummy dataset.
+
+Inspection & Reports Page
+
+Display dummy inspection data.
+
+AI-simulated alerts like: “High risk detected in Lot #45”.
+
+Reports include: vendor performance, complaint trends, predictive maintenance.
+
+Export dummy data to PDF / CSV.
+
+Dashboard Page
+
+Centralized dashboard with dummy charts:
+
+Inventory overview (count of parts by type).
+
+Graphs (supplier comparison, defect rates, inspections).
+
+Notifications area for simulated smart alerts.
+
+🎨 Design Guidelines
+
+Clean, Material UI or Tailwind dashboard design.
+
+Color codes for part status (Green = OK, Orange = Warning, Red = Defective).
+
+QR code generator should produce a downloadable PNG/SVG.
+
+Dummy data should be preloaded for testing both vendor + official workflows.
+
+⚙️ Notes
+
+No real UDM/TMS integration → all data is dummy/mock.
+
+Ensure role-based login → different UI for Vendor vs Official.
+
+Vendors: Create & Generate QR.
+
+Officials: Scan, Inspect, Report, Dashboard.

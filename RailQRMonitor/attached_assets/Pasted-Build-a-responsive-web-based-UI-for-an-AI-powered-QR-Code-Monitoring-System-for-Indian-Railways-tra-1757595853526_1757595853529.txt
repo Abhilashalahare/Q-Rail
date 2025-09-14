@@ -1,0 +1,99 @@
+Build a responsive web-based UI for an “AI-powered QR Code Monitoring System for Indian Railways track fittings.”
+
+🎯 Purpose
+
+The website should let railway admins, vendors, and inspectors:
+
+Simulate scanning of laser-engraved QR codes on track fittings (elastic rail clips, liners, pads, sleepers).
+
+Display dummy data (since real UDM/TMS data is not available).
+
+Show lifecycle details such as vendor, lot number, warranty period, inspection history, and performance status.
+
+Register complaints, visualize reports, and generate AI-based smart alerts (simulated with mock data).
+
+Provide an interactive dashboard for monitoring and decision-making.
+
+🖥️ Website UI Pages
+
+Home / Landing Page
+
+Introduction to the system.
+
+Quick access buttons: Scan QR, Dashboard, Complaints, Reports.
+
+QR Scanning Simulation Page
+
+Instead of real camera access, allow:
+
+Manual QR code entry (text field).
+
+Upload of dummy QR images (simulated).
+
+On scan → fetch and display dummy fitting details:
+
+Vendor name, lot number, supply date, warranty validity.
+
+Last inspection date + current status (OK / Needs Attention / Defective).
+
+Complaint Registration Page
+
+Form to log a complaint: fitting ID (linked to dummy QR), issue description, file upload (optional).
+
+Store in dummy complaint database (local JSON or mock backend).
+
+Inspection & Reports Page
+
+Display dummy inspection data for fittings.
+
+Show AI-simulated anomaly detection alerts (e.g., “High failure risk detected on Lot #23”).
+
+Reports should include:
+
+Vendor performance trends.
+
+Complaint statistics.
+
+Predictive maintenance alerts.
+
+Export option: PDF / CSV (dummy export).
+
+Dashboard Page
+
+Centralized dashboard with dummy data visualization:
+
+Inventory overview (e.g., number of clips, liners, pads).
+
+Graphs: defect rates over time, supplier comparison, inspection compliance.
+
+Notifications area for smart alerts (dummy).
+
+🎨 UI Design Guidelines
+
+Clean Material UI / Tailwind CSS dashboard look.
+
+Responsive design (desktop + tablet friendly).
+
+Use charts (bar, line, pie) for dummy data visualization.
+
+Color coding: Green (OK), Orange (Warning), Red (Defective).
+
+Notifications styled as toast alerts or sidebar alerts.
+
+⚙️ Notes
+
+No real UDM/TMS integration → all data should be dummy/mock for demo purposes.
+
+Assume QR scan = text input or image upload → then fetch dummy fitting details.
+
+Dummy dataset should include:
+
+Vendors (Vendor A, B, C).
+
+Fitting types (elastic clips, liners, pads).
+
+Warranty (randomized).
+
+Inspection dates (randomized).
+
+Status (OK, Warning, Defective).
