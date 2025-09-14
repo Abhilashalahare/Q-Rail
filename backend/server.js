@@ -22,7 +22,11 @@ connectDB();
 
 app.use("/api/vendor", vendorRoutes);
 app.use("/api/part", partRoutes);
+app.use("/uploads", express.static("uploads"));
 app.use("/api/qr", qrRoutes);
 
+
+
 const PORT = process.env.PORT || 8000;
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

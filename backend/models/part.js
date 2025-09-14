@@ -1,3 +1,5 @@
+// stores the details of the physical part (type, lot number, quantity, supply date, warranty, vendor).
+
 import mongoose from "mongoose";
 
 const partSchema = new mongoose.Schema({

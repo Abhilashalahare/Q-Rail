@@ -1,10 +1,12 @@
-import express from "express";
-import { generateQRCodePDF } from "../controllers/qrController.js";
-import { authMiddleware } from "../middlewares/auth.js";
+// routes/qr.js
+import express from 'express';
+import { generateQRZip, handleQRScan, getBatchDetails, testQRGeneration } from '../controllers/qrController.js';
 
 const router = express.Router();
 
-// Protected route: only logged-in vendors can generate QR
-router.post("/generate", generateQRCodePDF);
+router.post('/generate-zip', generateQRZip);
+router.get('/test-qr', testQRGeneration);
+router.get('/:partPrefix/:yearMonthCode', handleQRScan);
+router.get('/batch/:batchId', getBatchDetails);
 
 export default router;
